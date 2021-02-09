@@ -15,14 +15,14 @@ car = [{1700,3700,5730,6700,6740,6720,6410,7700,7720,7800,7420,8700,8720,8730,97
        {5230,6230,6240,6220,7200,7220,8200,8220,8230,9200,9230,9240},
        {5280,6280,6290,6270,7250,7270,8250,8270,8280,9250,9280,9290},
        {5780,6780,6790,6770,7750,7770,8750,8770,8780,9750,9780,9790}]
-print('Keio vehicle number display program Ver.1.0')
+print('Keio vehicle number display program Ver.1.5')
 print('Copyright ©︎2021 Chutoro Detteiu(@ctr_exe). All Rights Reserved.')
 while True:
     if loop_key == 1:
         car_text = ""
         i = 0
         passing = False
-        start = input("知りたい車番を入力してください。終了する場合にはexitと入力してくだささい")
+        start = input("知りたい車番を入力してください。終了する場合にはexitと入力してくだささい:")
         input_type = str.isnumeric(start)
         if start ==  "exit":
             sys.exit()
@@ -36,13 +36,6 @@ while True:
         if passing:
             pass
         else:
-            car_nam_list = list(start)
-            for i in range(0,len(series_nam)-1):
-                if car_nam_list[0] == str(series_nam[i]):
-                    this_series_name = series_name[i]
-                    this_output_text = series_name_output[i]
-                else:
-                    loop_key = 1
 
             start_list = list(str(start))
             for a in range(0,2):
@@ -73,8 +66,7 @@ while True:
             pass
         else:
             organi_nam_full = int(start) - 50 #50は八王子方面車両の+50を引くため
-            organi_full_list = list(str(organi_nam_full))
-            if organi_full_list[1] != list(start)[1]:
+            if list(str(organi_nam_full))[1] != list(start)[1]:
                 organi_nam_full = int(start)
             else:
                 pass
