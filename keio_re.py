@@ -3,7 +3,6 @@ import unicodedata
 
 loop_key = 1
 series_nam = [1,3,5,6,7,8,9]
-series_name = ["keio1000","keio3000","keio5000","keio6000","keio7000","keio8000","keio9000"]
 series_name_output = ['1000系','3000系','5000系','6000系','7000系','8000系','9000系']
 car = [{1700,3700,5730,6700,6740,6720,6410,7700,7720,7800,7420,8700,8720,8730,9700,9730,9740},
        {1100,3100,5030,6030,6040,6020,6860,7000,7020,7200,7870,8000,8020,8030,9000,9030,9040},
@@ -15,7 +14,7 @@ car = [{1700,3700,5730,6700,6740,6720,6410,7700,7720,7800,7420,8700,8720,8730,97
        {5230,6230,6240,6220,7200,7220,8200,8220,8230,9200,9230,9240},
        {5280,6280,6290,6270,7250,7270,8250,8270,8280,9250,9280,9290},
        {5780,6780,6790,6770,7750,7770,8750,8770,8780,9750,9780,9790}]
-print('Keio vehicle number display program Ver.1.5')
+print('Keio vehicle number display program Ver.1.6')
 print('Copyright ©︎2021 Chutoro Detteiu(@ctr_exe). All Rights Reserved.')
 while True:
     if loop_key == 1:
@@ -38,6 +37,12 @@ while True:
         else:
 
             start_list = list(str(start))
+            for i in range(0,len(series_nam)):
+                if int(start_list[0]) == series_nam[i]:
+                    series_seq = i
+                else:
+                    loop_key = 1
+
             for a in range(0,2):
                 #print(start_list)
                 del start_list[0]
@@ -46,6 +51,7 @@ while True:
                 pass
             else:
                 del start_list[0]
+
 
             organi_nam = ''.join(start_list)
 
@@ -71,4 +77,4 @@ while True:
             else:
                 pass
 
-            print(str(organi_nam_full) + 'Fの' + car_text)
+            print(series_name_output[series_seq] + str(organi_nam_full) + 'Fの' + car_text)
