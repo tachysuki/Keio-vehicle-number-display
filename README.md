@@ -1,4 +1,4 @@
-# Keio vehicle number display program Ver.1.6
+# Keio vehicle number display program Ver.1.65
 京王線の車両番号を入力するとなんの編成の何号車かを教えてくれるプログラムです
 
 存在しない番号(5738Fなど)と入力しても表示されてしまうのは改良予定です
