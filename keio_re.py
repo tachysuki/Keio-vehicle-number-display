@@ -14,7 +14,7 @@ car = [{1700,3700,5730,6700,6740,6720,6410,7700,7720,7800,7420,8700,8720,8730,97
        {5230,6230,6240,6220,7200,7220,8200,8220,8230,9200,9230,9240},
        {5280,6280,6290,6270,7250,7270,8250,8270,8280,9250,9280,9290},
        {5780,6780,6790,6770,7750,7770,8750,8770,8780,9750,9780,9790}]
-print('Keio vehicle number display program Ver.1.6')
+print('Keio vehicle number display program Ver.1.65')
 print('Copyright ©︎2021 Chutoro Detteiu(@ctr_exe). All Rights Reserved.')
 while True:
     if loop_key == 1:
@@ -41,7 +41,7 @@ while True:
                 if int(start_list[0]) == series_nam[i]:
                     series_seq = i
                 else:
-                    loop_key = 1
+                    pass
 
             for a in range(0,2):
                 #print(start_list)
